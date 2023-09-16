@@ -9,7 +9,7 @@ test('returns reversed string of multiple words', () => {
 });
 
 test('returns reversed string with punctuation', () => {
-   expect(caesarCipher('hello world!', 3)).toBe('khoor zruog!');
+   expect(caesarCipher('hello world!', 10)).toBe('rovvy gybvn!');
 });
 
 test('returns same string when shift is 0', () => {
@@ -18,4 +18,8 @@ test('returns same string when shift is 0', () => {
 
 test('test wrapping from z to a', () => {
    expect(caesarCipher('z', 1)).toBe('a');
+});
+
+test('Case satay intact', () => {
+   expect(caesarCipher('Hello World', 20)).toBe('Byffi Qilfx');
 });
