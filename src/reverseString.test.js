@@ -9,15 +9,13 @@ test('returns reversed string of multiple words', () => {
 });
 
 test('reject non string input', () => {
-   function typeTest() {
+   expect(() => {
       reverseString(1);
-   }
-   expect(typeTest).toThrow('Must be a string');
+   }).toThrow('Must be a string');
 });
 
 test('reject empty string', () => {
-   function emptyTest() {
+   expect(() => {
       reverseString('');
-   }
-   expect(emptyTest).toThrow('Must be at least one char');
+   }).toThrow('Must be at least one char');
 });
